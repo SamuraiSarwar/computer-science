@@ -1,0 +1,26 @@
+/*
+ * 
+ */
+/**
+ *
+ * @author Muezzin Sarwar
+ */
+import java.util.Scanner;
+class Util{
+    public static void sopl(String str)
+    {
+        System.out.println(str);
+    }//sopl
+    public static void sop(String str)
+    {
+        System.out.print(str);
+    }//sop
+    public static int getI(String str)
+    {
+    
+            Scanner kb = new Scanner(System.in);
+            sop(str+"-->");
+            return kb.nextInt();
+    }//getI
+    
+}//UtilMES
