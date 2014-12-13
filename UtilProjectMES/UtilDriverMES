@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editor.ki
  */
 /**
  *
@@ -14,6 +14,59 @@ public class UtilDriverMES {
      */
     public static void main(String[] args) {
         Util.sopl("Util Driver");
+        int menu = 0;
+        do{
+         Util.sopl("1.Demonstrate sopl");
+         Util.sopl("2.Demonstrate sop");
+         Util.sopl("3.Demonstrate getMethods");
+         Util.sopl("4.Demonstrate Quit");
+         menu = Util.getI("Enter Menu Choice");
+         switch(menu)
+         {
+             case 1: Util.sopl("Hows it going");
+                 break;
+                 
+             case 2: Util.sop("Monkey");
+                 Util.sop("Tiger");
+                 Util.sopl(" ");
+                 break;
+                 
+             case 3: int win = Util.getI("Enter # of Cowboy WIns.");
+                     Util.sopl("Wins"+win);
+                 break;
+                 
+             case 4: //blankSpace
+                 break;
+                 
+             case 5: //skipLines
+                 break;
+                 
+             case 6: //randomNum
+                 int high = 100;
+                 int low = 5;
+                 int numRan = Util.numRandom(high, low);
+                 Util.sopl(numRan);
+                 break;
+                 
+             case 7://decimalFormat
+                 
+                 break;
+                 
+             case 8://numProtect
+                 break;
+                 
+             case 9: //pauseMat
+                 break;
+                 
+             case 10: //randomColor
+                 break;
+                 
+             case 11: break;
+             default: Util.sopl("Enter 1-11");
+                 
+         }//switch
+        }while(menu !=11);
+        
     }//main
     
 }//UtilDriverMES
