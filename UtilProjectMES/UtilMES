@@ -1,12 +1,11 @@
-/*
- * 
- */
-/**
- *
- * @author Muezzin Sarwar
+/*Muezzin Sarwar
+ *Mrs. Lowenberg
+ *Period 4
+ *12/15/2014
  */
 import java.util.Scanner;
 class Util{
+    //-------------SOPL-----------------------
     public static void sopl(String str)
     {
         System.out.println(str);
@@ -27,7 +26,7 @@ class Util{
     {
         System.out.println(str);
     }//sopl
-    ////////////////////////////////////
+    //---------------SOP-----------------------
     public static void sop(String str)
     {
         System.out.print(str);
@@ -36,7 +35,7 @@ class Util{
     {
         System.out.print(str);
     }//sop
-    public static void sop(double str)
+     public static void sop(double str)
     {
         System.out.print(str);
     }//sop
@@ -48,7 +47,7 @@ class Util{
     {
         System.out.print(str);
     }//sop
-    ////////////////////////////////////
+    //----------------GETMETHOD---------------------
     public static int getI(String str)
     {
             Scanner kb = new Scanner(System.in);
@@ -74,29 +73,11 @@ class Util{
             sop(str+"-->");
             return kb.nextDouble();
     }//getD
-
-    //---------------------BLANKSPACES------------------
-    public static String blankSpaces(String str)
-    {
-            
-    }
-///////////////////////////////////////////////////////
+    //--------------------RANDOMNUMBER------------------
     public static int numRandom(int low, int high)
     {
         int randomNum =(int)((Math.random()*high-low)+low);
         return randomNum;
-    }
-    //////////////////////////////////////
-    public static String decimalFormat()
-    {
-        Scanner kb = new Scanner(System.in);
-        
-        return kb.nextLine();
-    }
-    /////////////////////////////////////
-    public static int colorRandom(int low, int high)
-    {
-        return (int)((Math.random()*high-low + 1)+low);
-    }
-    
+    }//numRandom
 }//UtilMES
+
