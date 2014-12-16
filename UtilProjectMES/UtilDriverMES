@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.ki
- */
-/**
- *
- * @author Student
+/*Muezzin Sarwar
+ *Mrs. Lowenberg
+ *Period 4
+ *12/15/2014
  */
 public class UtilDriverMES {
 
@@ -19,53 +15,110 @@ public class UtilDriverMES {
          Util.sopl("1.Demonstrate sopl");
          Util.sopl("2.Demonstrate sop");
          Util.sopl("3.Demonstrate getMethods");
-         Util.sopl("4.Demonstrate Quit");
+         Util.sopl("4.Demonstrate blankSpaces");
+         Util.sopl("5.Demonstrate skiplines");
+         Util.sopl("6.Demonstrate random num");
+         Util.sopl("7.Demonstrate decimalFormat");
+         Util.sopl("8.Demonstrate Heading");
+         Util.sopl("9.Demonstrate Pause method");
+         Util.sopl("10.Demonstrate Number protection");
+         Util.sopl("11.Demonstrate Quit");
          menu = Util.getI("Enter Menu Choice");
          switch(menu)
          {
-             case 1: Util.sopl("Hows it going");
+             //-----------SOPL-------------
+             case 1: //sopl
+                     Util.sopl("Hows it going");
+                     Util.sopl('A');
+                     Util.sopl(true);
+                     Util.sopl(2);
+                     Util.sopl(1.23);
+                     Util.sopl(" "); 
+             
                  break;
-                 
-             case 2: Util.sop("Monkey");
+             //-------------SOP-------------
+             case 2: //sop
+                 Util.sop("Monkey");
                  Util.sop("Tiger");
+                 Util.sop(true);
+                 Util.sop(3);
+                 Util.sop('Y');
+                 Util.sop(1.20);
                  Util.sopl(" ");
                  break;
-                 
-             case 3: int win = Util.getI("Enter # of Cowboy WIns.");
-                     Util.sopl("Wins"+win);
+             //-------------GETMETHODS--------------
+             case 3: //getMethods
+                     int win = Util.getI("Enter # of Cowboy WIns.");
+                     Util.sopl("Wins "+win);
+                     String name = Util.getS("Enter your name.");
+                     Util.sopl("Name: "+name);
+                     char gen = Util.getC("Enter your gender(B or G).");
+                     Util.sopl("Gender: "+gen);
+                     double cash = Util.getD("Enter amount of lunch money.");
+                     Util.sopl("Money: "+cash);
+                     Util.sopl(" ");
                  break;
-                 
+             //-------------BLANKSPACES---------------
              case 4: //blankSpace
+                 String ranWord = Util.getS("Enter random word.");
+                 for(int i= Util.getI("Enter random # for spaces"); i<5; i++)
+                 {
+                     Util.sop(" ");
+                     
+                 }
+                 Util.sopl(ranWord);
+                 Util.sopl("  ");
                  break;
-                 
+             //------------SKIPLINES--------------------
              case 5: //skipLines
+                 for(int i= Util.numRandom(10,5); i<5; i++)
+                 {
+                     Util.sopl(" ");
+                 }
                  break;
-                 
+             //-----------RANDOMNUMBER-------------------
              case 6: //randomNum
                  int high = 100;
-                 int low = 5;
+                 int low = 50;
                  int numRan = Util.numRandom(high, low);
                  Util.sopl(numRan);
                  break;
-                 
+             //------------DECIMALFORMAT------------------
              case 7://decimalFormat
-                 
+                 int beforeDec = Util.getI("Enter a #.");
+                 Util.sopl(beforeDec+".00");
                  break;
-                 
-             case 8://numProtect
+             //------------HEADING-------------------------
+             case 8://heading
+                 String nameH = Util.getS("Enter your name.");
+                 int periodH = Util.getI("Enter your Class Period.");
+                 String monthH = Util.getS("Enter the name of the month.");
+                 int dateH = Util.getI("Enter the date.");
+                 int yearH = Util.getI("Enter the year.");
+                 Util.sopl(nameH);
+                 Util.sopl("Period "+periodH);
+                 Util.sop(monthH);
+                 Util.sop(" ");
+                 Util.sop(dateH+",");
+                 Util.sop(" ");
+                 Util.sopl(yearH);
                  break;
-                 
-             case 9: //pauseMat
+              //---------------PAUSEMETHOD------------------
+             case 9://pauseMet
+                 String enter = Util.getS("Click enter.");
+                 Util.sopl(enter);
                  break;
-                 
-             case 10: //randomColor
+             //-----------------NUMPROTECT-------------------
+             case 10: //numProtect
+                 int numProtect = Util.getI("Enter a number you want to protect.");
+                 Util.sopl("Your number "+numProtect+" has been protected.");
                  break;
-                 
+             //--------------------QUIT-----------------------
              case 11: break;
              default: Util.sopl("Enter 1-11");
                  
          }//switch
-        }while(menu !=11);
+        }while(menu !=11);//do-while
         
     }//main
     
