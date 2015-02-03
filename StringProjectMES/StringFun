@@ -1,0 +1,46 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+
+public class StringFun{
+	public static void main(String[] arg)
+	{
+		Scanner input = new Scanner(System.in);
+		DecimalFormat output = new DecimalFormat("#.00");
+		int menu = 0;
+		do
+		{
+			System.out.println("1. Number of r,s,t, and l  letters ");
+			System.out.println("2. String Even or Odd");
+			System.out.println("3. Song");
+			System.out.println("4. Palindrome");
+			System.out.println("5. Quit");
+			
+			
+		}while(menu != 0);//do
+		menu = input.nextInt();
+		switch(menu)
+		{
+		case 0:
+			
+			break;
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+			
+			break;
+		case 5:
+			
+			break;
+		default: System.out.println("Enter 0-5");
+		}//switch
+		
+	}//main
+}//StringFun
