@@ -1,3 +1,18 @@
 public class StringHolder {
-    
-}
+    public static int letterCount(String str)
+    {
+        int x=0;
+        int count = 0;
+       while(x < str.length());
+       {
+          
+           return count;
+       }//while
+    }//letterCount
+    public static boolean ifOdd(String str)
+    {
+       boolean ifOdd=true;
+       
+       return ifOdd;
+    }//ifOdd
+}//StringHolder
