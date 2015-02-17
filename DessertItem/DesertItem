@@ -1,0 +1,34 @@
+public abstract class DessertItem implements Comparable <DessertItem>
+        {
+    private String name;
+    //default constructor
+    public DessertItem()
+    {
+        name = "";
+    }//default
+    public DessertItem(String nm)
+    {
+        name = nm;
+    }//user defined constructor
+    //accesor method
+    public String getName()
+    {
+        return name;
+    }//mutator method
+    public void changeName(String nm)
+    {
+        name = nm;
+    }//change name
+    public abstract double getCost();
+    //overrides method of the object class
+    public String toString()
+    {
+        return "\nName: "+ name;
+    }//toString
+    //implementation fron the Comparable class
+    public int compareTo(DessertItem obj)
+    {
+        return this.name.compareTo(obj.name);
+    }//compareTo
+            
+}
