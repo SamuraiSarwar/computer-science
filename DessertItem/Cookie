@@ -1,0 +1,24 @@
+public class Cookie extends DessertItem{
+    private double priceDozen;
+    private int numCookie;
+    //default constructor
+    //user defined constructor
+    public Cookie(String nm, int num, double ppOr)
+    {
+        super(nm);
+        numCookie = num;
+        priceDozen= ppOr;
+    }//user defined
+    
+    //accessor method - 2 ea
+    //mutator method - 2 ea
+    //getCost method - returns a double for the total price
+    //of cookies bought
+    //toString method - first call the super.toString+ with lables
+    //and numbercookies, price/dozen
+    @Override
+    public double getCost()
+    {
+        return 0;
+    }//getCost
+}//Cookie
