@@ -1,0 +1,48 @@
+/*Muezzin Sarwar
+ *Mrs. Lowenberg
+ *Period 4
+ *12/15/2014
+ */
+public class Candy extends DessertItem{ 
+     private double pricePound; 
+     private int numPound;
+     
+     public Candy()
+    {
+        numPound = 0;
+        pricePound = 0;
+    }//default
+     //default constructor 
+     //user defined constructor 
+     public Candy(String nm, int num, double pplb) 
+     { 
+         super(nm); 
+         numPound = num; 
+         pricePound= pplb; 
+     }//user defined 
+      public int getNumPound()
+      {
+          return numPound;
+      }
+      public double getPricePound()
+      {
+          return pricePound;
+      }
+      public void setNumPound(int num)
+      {
+          numPound = num;
+      }
+      public void setPricePound(double price)
+      {
+          pricePound = price;
+      }
+      @Override
+      public String toString()
+      {
+          return super.toString() + "\nCandy: $";
+      }
+     public double getCost() 
+     { 
+         return pricePound*numPound;
+     }//getCost 
+ }//Icecream
