@@ -1,6 +1,16 @@
-     public class Cookie extends DessertItem{ 
+/*Muezzin Sarwar
+ *Mrs. Lowenberg
+ *Period 4
+ *12/15/2014
+ */
+public class Cookie extends DessertItem{ 
      private double priceDozen; 
      private int numCookie; 
+     public Cookie()
+    {
+        priceDozen = 0;
+        numCookie = 0;
+    }//default
      //default constructor 
      //user defined constructor 
      public Cookie(String nm, int num, double ppDz) 
@@ -27,7 +37,7 @@
       }
       public String toString()
       {
-          return this.toString();
+          return super.toString() + "\nCookie: $";
       }
      //accessor method - 2 ea 
      //mutator method - 2 ea 
@@ -38,6 +48,6 @@
      @Override 
      public double getCost() 
      { 
-         return 0; 
+         return numCookie*priceDozen; 
      }//getCost 
  }//Cookie 
