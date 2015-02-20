@@ -1,0 +1,84 @@
+/*Muezzin Sarwar
+ *Mrs. Lowenberg
+ *Period 4
+ *12/15/2014
+
+ */
+import java.util.Scanner;
+class Util{
+    //-------------SOPL-----------------------
+    public static void sopl(String str)
+    {
+        System.out.println(str);
+    }//sopl
+    public static void sopl(int str)
+    {
+        System.out.println(str);
+    }//sopl
+    public static void sopl(double str)
+    {
+        System.out.println(str);
+    }//sopl
+    public static void sopl(char str)
+    {
+        System.out.println(str);
+    }//sopl
+    public static void sopl(boolean str)
+    {
+        System.out.println(str);
+    }//sopl
+    //---------------SOP-----------------------
+    public static void sop(String str)
+    {
+        System.out.print(str);
+    }//sop
+    public static void sop(int str)
+    {
+        System.out.print(str);
+    }//sop
+     public static void sop(double str)
+    {
+        System.out.print(str);
+    }//sop
+    public static void sop(char str)
+    {
+        System.out.print(str);
+    }//sop
+    public static void sop(boolean str)
+    {
+        System.out.print(str);
+    }//sop
+    //----------------GETMETHOD---------------------
+    public static int getI(String str)
+    {
+            Scanner kb = new Scanner(System.in);
+            sop(str+"-->");
+            return kb.nextInt();
+
+    }//getI
+    public static char getC(String str)
+    {
+            Scanner kb = new Scanner(System.in);
+            sop(str+"-->");
+            return kb.nextLine().charAt(0);
+    }//getC
+    public static String getS(String str)
+    {
+            Scanner kb = new Scanner(System.in);
+            sop(str+"-->");
+            return kb.nextLine();
+    }//getS
+    public static double getD(String str)
+    {
+            Scanner kb = new Scanner(System.in);
+            sop(str+"-->");
+            return kb.nextDouble();
+    }//getD
+    //--------------------RANDOMNUMBER------------------
+    public static int numRandom(int low, int high)
+    {
+        int randomNum =(int)((Math.random()*high-low)+low);
+        return randomNum;
+    }//numRandom
+}//UtilMES
+
