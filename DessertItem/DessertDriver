@@ -1,8 +1,3 @@
-/*Muezzin Sarwar
- *Mrs. Lowenberg
- *Period 4
- *12/15/2014
- */
     public class DessertDriver{
     public static void main(String[] agrs)
             {
@@ -37,6 +32,61 @@
                     Util.sopl("   Total:   " + total);
                     Util.sopl("   Tax:   " + tax);
                     Util.sopl("   Total Due:   " + totalDue);
+                    break;//case 5
+                case 6:
+                    int changeMenu = 0;
+                    int itemMenu = 0;
+                    Util.sopl("Change: 1.Cookie 2. Candy 3. Ice cream 4. Sundae");
+                    changeMenu = Util.geI("Enter dessert to change");
+                    switch(changeMenu)
+                    {
+                        case 1:
+                        Util.sopl("Item to change")
+                        itemMenu = Util.getI("Enter item # to change")
+                        if(itemMenu==1);
+                            dessert.changeName(Util.getS("Enter new name"));
+                        else
+                            if(itemMenu==2);
+                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            else
+                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            break;//menu
+                        case 2:
+                            Util.sopl("Item to change")
+                        itemMenu = Util.getI("Enter item # to change")
+                        if(itemMenu==1);
+                            dessert.changeName(Util.getS("Enter new name"));
+                        else
+                            if(itemMenu==2);
+                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            else
+                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            break;//case 2
+                        case 3:
+                            Util.sopl("Item to change")
+                        itemMenu = Util.getI("Enter item # to change")
+                        if(itemMenu==1);
+                            dessert.changeName(Util.getS("Enter new name"));
+                        else
+                            if(itemMenu==2);
+                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            else
+                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            break;//case 3
+                        case 4:
+                            Util.sopl("Item to change")
+                        itemMenu = Util.getI("Enter item # to change")
+                        if(itemMenu==1);
+                            dessert.changeName(Util.getS("Enter new name"));
+                        else
+                            if(itemMenu==2);
+                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            else
+                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            break;//case 4
+                            
+                            
+                    }//switch(menu)
             }//switch(menu)
         }while(menu!=7);
     }//main
