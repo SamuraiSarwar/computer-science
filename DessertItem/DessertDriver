@@ -24,6 +24,25 @@
                     double price = Util.getD("Enter # of dozen");
                     dessert = new Cookie(name, qty, price);
                     break;//case 1
+                case 2:
+                    String name = Util.getS("Enter name of cookie");
+                    int qty = Util.getI("Enter # of cookies");
+                    double price = Util.getD("Enter # of dozen");
+                    dessert = new Cookie(name, qty, price);
+                    break;//case 2
+                case 3:
+                    String name = Util.getS("Enter name of cookie");
+                    int qty = Util.getI("Enter # of cookies");
+                    double price = Util.getD("Enter # of dozen");
+                    dessert = new Cookie(name, qty, price);
+                    break;//case 3
+                case 4:
+                    String name = Util.getS("Enter name of cookie");
+                    int qty = Util.getI("Enter # of cookies");
+                    double price = Util.getD("Enter # of dozen");
+                    dessert = new Cookie(name, qty, price);
+                    break;//case 4
+                                
                 case 5:
                     double total = dessert.getCost();
                     double tax = total * TAX_RATE;
@@ -58,9 +77,9 @@
                             dessert.changeName(Util.getS("Enter new name"));
                         else
                             if(itemMenu==2);
-                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            ((Candy)dessert).setWeight(Util.getS("Enter new quantity"));
                             else
-                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            ((Cookie)dessert).setPriceLab(Util.getS("Enter new price"));
                             break;//case 2
                         case 3:
                             Util.sopl("Item to change")
@@ -69,9 +88,9 @@
                             dessert.changeName(Util.getS("Enter new name"));
                         else
                             if(itemMenu==2);
-                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            ((Icecream)dessert).setNumCookie(Util.getS("Enter new quantity"));
                             else
-                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            ((Icecream)dessert).setPriceDozen(Util.getS("Enter new price"));
                             break;//case 3
                         case 4:
                             Util.sopl("Item to change")
@@ -80,9 +99,9 @@
                             dessert.changeName(Util.getS("Enter new name"));
                         else
                             if(itemMenu==2);
-                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            ((Icecream)dessert).setNumCookie(Util.getS("Enter new quantity"));
                             else
-                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            ((Sundae)dessert).setPriceDozen(Util.getS("Enter new price"));
                             break;//case 4
                             
                             
