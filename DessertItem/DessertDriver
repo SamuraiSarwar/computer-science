@@ -3,6 +3,41 @@
  *Period 4
  *12/15/2014
  */
-public class DessertDriver {
-    
-}
+    public class DessertDriver{
+    public static void main(String[] agrs)
+            {
+        int menu=0;
+        String name;
+        Util.sopl("Weclome to the Candy Store");
+        name = Util.getS("What is your name?");
+        
+        do 
+        {
+            Util.sopl("1. Cookie");
+            Util.sopl("2. Cookie");
+            Util.sopl("3. Cookie");
+            Util.sopl("4. Cookie");
+            Util.sopl("5. Cookie");
+            Util.sopl("6. Cookie");
+            Util.sopl("Cookie");
+            menu = Util.getI("Choose a #");
+            switch (menu)
+            {
+                case 1:
+                    String name = Util.getS("Enter name of cookie");
+                    int qty = Util.getI("Enter # of cookies");
+                    double price = Util.getD("Enter # of dozen");
+                    dessert = new Cookie(name, qty, price);
+                    break;//case 1
+                case 5:
+                    double total = dessert.getCost();
+                    double tax = total * TAX_RATE;
+                    double totalDue = total + tax;
+                    Util.sopl(dessert);
+                    Util.sopl("   Total:   " + total);
+                    Util.sopl("   Tax:   " + tax);
+                    Util.sopl("   Total Due:   " + totalDue);
+            }//switch(menu)
+        }while(menu!=7);
+    }//main
+}//DessertDriver
