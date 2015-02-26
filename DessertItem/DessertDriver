@@ -1,15 +1,19 @@
+   /*Muezzin Sarwar
+    *Mrs. Lowenburg
+    *Period 4
+    *2/26/2015
+    */
     public class DessertDriver{
-    public static void main(String[] agrs)
+    public static void main(String args[])
             {
         int menu=0;
-        String name;
         Util.sopl("Weclome to the Candy Store");
-        name = Util.getS("What is your name?");
-        
+        String name = Util.getS("What is your name?");
+        final double TAX_RATE = .0825;
         do 
         {
             Util.sopl("1. Cookie");
-            Util.sopl("2. Cookie");
+            Util.sopl("2. Candy");
             Util.sopl("3. Cookie");
             Util.sopl("4. Cookie");
             Util.sopl("5. Cookie");
@@ -19,27 +23,28 @@
             switch (menu)
             {
                 case 1:
-                    String name = Util.getS("Enter name of cookie");
+                    
+                    name = Util.getS("Enter name of cookie");
                     int qty = Util.getI("Enter # of cookies");
                     double price = Util.getD("Enter # of dozen");
-                    dessert = new Cookie(name, qty, price);
-                    break;//case 1
+                    Cookie dessert = new Cookie(name, qty, price);
+                    break;//case 1//case 1
                 case 2:
-                    String name = Util.getS("Enter name of cookie");
-                    int qty = Util.getI("Enter # of cookies");
-                    double price = Util.getD("Enter # of dozen");
+                    name = Util.getS("Enter name of cookie");
+                    qty = Util.getI("Enter # of cookies");
+                    price = Util.getD("Enter # of dozen");
                     dessert = new Cookie(name, qty, price);
                     break;//case 2
                 case 3:
-                    String name = Util.getS("Enter name of cookie");
-                    int qty = Util.getI("Enter # of cookies");
-                    double price = Util.getD("Enter # of dozen");
+                    name = Util.getS("Enter name of cookie");
+                    qty = Util.getI("Enter # of cookies");
+                    price = Util.getD("Enter # of dozen");
                     dessert = new Cookie(name, qty, price);
                     break;//case 3
                 case 4:
-                    String name = Util.getS("Enter name of cookie");
-                    int qty = Util.getI("Enter # of cookies");
-                    double price = Util.getD("Enter # of dozen");
+                    name = Util.getS("Enter name of cookie");
+                    qty = Util.getI("Enter # of cookies");
+                    price = Util.getD("Enter # of dozen");
                     dessert = new Cookie(name, qty, price);
                     break;//case 4
                                 
@@ -56,45 +61,45 @@
                     int changeMenu = 0;
                     int itemMenu = 0;
                     Util.sopl("Change: 1.Cookie 2. Candy 3. Ice cream 4. Sundae");
-                    changeMenu = Util.geI("Enter dessert to change");
+                    changeMenu = Util.getI("Enter dessert to change");
                     switch(changeMenu)
                     {
                         case 1:
-                        Util.sopl("Item to change")
-                        itemMenu = Util.getI("Enter item # to change")
-                        if(itemMenu==1);
+                        Util.sopl("Item to change");
+                        itemMenu = Util.getI("Enter item # to change");
+                        if(itemMenu==1)
                             dessert.changeName(Util.getS("Enter new name"));
                         else
-                            if(itemMenu==2);
-                            ((Cookie)dessert).setNumCookie(Util.getS("Enter new quantity"));
-                            else
-                            ((Cookie)dessert).setPriceDozen(Util.getS("Enter new price"));
+                            if(itemMenu==2)
+                            ((Cookie)dessert).setNumCookie(Util.getI("Enter new quantity"));
+                                else
+                            ((Cookie)dessert).setPriceDozen(Util.getD("Enter new price"));
                             break;//menu
                         case 2:
-                            Util.sopl("Item to change")
-                        itemMenu = Util.getI("Enter item # to change")
-                        if(itemMenu==1);
+                        Util.sopl("Item to change");
+                        itemMenu = Util.getI("Enter item # to change");
+                        if(itemMenu==1)
                             dessert.changeName(Util.getS("Enter new name"));
                         else
-                            if(itemMenu==2);
-                            ((Candy)dessert).setWeight(Util.getS("Enter new quantity"));
+                            if(itemMenu==2)
+                                ((Candy)dessert).setWeight(Util.getI("Enter new quantity"));
                             else
-                            ((Cookie)dessert).setPriceLab(Util.getS("Enter new price"));
+                                ((Cookie)dessert).setPriceDozen(Util.getD("Enter new price"));
                             break;//case 2
                         case 3:
-                            Util.sopl("Item to change")
-                        itemMenu = Util.getI("Enter item # to change")
-                        if(itemMenu==1);
+                            Util.sopl("Item to change");
+                        itemMenu = Util.getI("Enter item # to change");
+                        if(itemMenu==1)
                             dessert.changeName(Util.getS("Enter new name"));
                         else
-                            if(itemMenu==2);
-                            ((Icecream)dessert).setNumCookie(Util.getS("Enter new quantity"));
+                            if(itemMenu==2)
+                                ((Icecream)dessert).setNumCookie(Util.getI("Enter new quantity"));
                             else
-                            ((Icecream)dessert).setPriceDozen(Util.getS("Enter new price"));
+                                ((Icecream)dessert).setPriceDozen(Util.getD("Enter new price"));
                             break;//case 3
                         case 4:
-                            Util.sopl("Item to change")
-                        itemMenu = Util.getI("Enter item # to change")
+                            Util.sopl("Item to change");
+                        itemMenu = Util.getI("Enter item # to change");
                         if(itemMenu==1);
                             dessert.changeName(Util.getS("Enter new name"));
                         else
@@ -105,7 +110,7 @@
                             break;//case 4
                             
                             
-                    }//switch(menu)
+                    }//switch(changeMenu)
             }//switch(menu)
         }while(menu!=7);
     }//main
