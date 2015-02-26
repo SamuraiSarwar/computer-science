@@ -27,6 +27,10 @@ class Util{
     {
         System.out.println(str);
     }//sopl
+    public static void sopl(Object ob)
+    {
+        System.out.println(ob);
+    }//sopl Object
     //---------------SOP-----------------------
     public static void sop(String str)
     {
@@ -48,6 +52,10 @@ class Util{
     {
         System.out.print(str);
     }//sop
+    public static void sop(Object ob)
+    {
+        System.out.println(ob);
+    }//sop Object
     //----------------GETMETHOD---------------------
     public static int getI(String str)
     {
@@ -81,4 +89,5 @@ class Util{
         return randomNum;
     }//numRandom
 }//UtilMES
+
 
