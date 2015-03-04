@@ -1,0 +1,27 @@
+public class ArrayFunHouse {
+    
+    public static int sumIt(int[] list, int start, int finish) 
+            {
+                int total = 0;
+                for(int x = start;x < finish; x++)
+            }
+    public static int countUp(int[] list, int num)
+            {
+                int ct = 0;
+                for(int x = 0;x < list.length; x++)
+                {
+                    
+                }
+            }
+    public static int removeAll(int[] list, int num)
+            {
+                
+            }
+    public static void displayArray
+    {
+        for(int x = 0; x < list.length; x++)
+        {
+            Util.sopl(list[x]);
+        }
+    }
+}
