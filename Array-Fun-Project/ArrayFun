@@ -7,7 +7,10 @@
         Util.sopl("1. Sum Array");
         Util.sopl("2. Count # in array");
         Util.sopl("3. Remove # from array");
-        Util.sopl("4. Quit");
+        Util.sopl("4. Ascending Order");
+        Util.sopl("5. Descending Order");
+        Util.sopl("6. Value Greater");
+        Util.sopl("7. Quit");
         menu = Util.getI("Choose a #");
         switch(menu)
         {
