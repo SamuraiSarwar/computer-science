@@ -1,4 +1,4 @@
-public class ArrayFunHouse {
+    public class ArrayFunHouse {
     
     public static int sumIt(int[] list, int start, int finish) 
             {
@@ -22,6 +22,34 @@ public class ArrayFunHouse {
         for(int x = 0; x < list.length; x++)
         {
             Util.sopl(list[x]);
+        }
+    }
+    public static int insertAll(int[] list, int num)
+            {
+                int last = 0;
+                
+            }
+    public boolean ascending(int list[])
+    {
+        int last= 0;
+        for(int x = 0; )
+    }
+    public boolean decending(int list[])
+    {
+        int last= 0;
+        for(int x=0; x<list.length;x++)
+        {
+            if(x!=0&&list[]>last)
+                return false;
+            x=last;
+        }
+    }
+    public int [] valueGreater(int list[], int greater)
+    {
+        int length=0;
+        for(int x = 0; x<list.length; x++)
+        {
+            if()
         }
     }
 }
