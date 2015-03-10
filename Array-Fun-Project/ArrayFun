@@ -12,21 +12,33 @@
         switch(menu)
         {
             case 1: 
-                int[] list = (1,4,3,2,1);
+                int[] list = {1,4,3,2,1};
                 Util.sopl("The sum from start to finish:"
                         + ArrayFunHouse.sumIt(list, 1, 3));
                 break;
             case 2:
-                int[] listCount = (4,3,4,2,7);
+                int[] listCount = {4,3,4,2,7};
                 num = 2;
                 break;
             case 3:
-                int[] listRemove = (4,3,4,2,7);
+                int[] listRemove = {4,3,4,2,7};
                 remove = 4;
                 break;
             case 4:
-        
+                int[] listAscend = {};
+                Util.sopl("The array is ascending" + ArrayFunHouse.ascending(listAscend));
                 break;
+            case 5:
+                int[] listDescend = {};
+                Util.sopl("The array is descending" + ArrayFunHouse.descending(listDescend));
+                break;
+            case 6:
+                int[] listEnter = {};
+                int greater = 9;
+                Util.sopl("All the values greater than nine from the array");
+                ArrayFunHouse.displayArray(ArrayFunHouse.valueGreater(listEnter, greater));
+                break;
+            
         }//switch(menu)
     }while (menu!=4);
 }//main
