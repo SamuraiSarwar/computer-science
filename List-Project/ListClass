@@ -1,0 +1,33 @@
+//Purpose: How to use an algorythm: Selection, inssertion, linearassaign,
+//display, delete, insertInOrder, display single element read & write files
+
+public class ListClass {
+    private String [] list;
+    private int size;//the # of actual ele in the array
+    private final int MAX = 30;//logical size, default size of array
+    //default constructor
+    
+    public ListClass()
+    {
+        list = new String[MAX];
+        size = 0;
+    }//ListClass
+    //user define - allows user to set logical size
+    public ListClass(int sz)
+    {
+        list = new String[sz];
+        size = 0;
+    }//ListClass user defined
+    public void assign(String str)
+    {
+        if(size < list.length)
+        {
+            list[size] = str;
+            size++;
+        }//if(size < list.length)
+        else
+            Util.sopl("Capacity has been reached.");
+    }//assign
+
+
+}//ListClass
