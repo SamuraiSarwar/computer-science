@@ -28,6 +28,12 @@ public class ListClass {
         else
             Util.sopl("Capacity has been reached.");
     }//assign
-
+    public void display()
+    {
+        for(int x = 0;x<size;x++)
+        {
+            Util.sopl(list[x]);
+        }
+    }//display
 
 }//ListClass
