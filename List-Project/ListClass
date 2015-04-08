@@ -1,5 +1,7 @@
 //Purpose: How to use an algorythm: Selection, inssertion, linearassaign,
 //display, delete, insertInOrder, display single element read & write files
+import java.io.*;
+import java.util.Scanner;
 
 public class ListClass {
     private String [] list;
@@ -35,5 +37,26 @@ public class ListClass {
             Util.sopl(list[x]);
         }
     }//display
-
+    public void writeFile()throws IOException
+    {
+        PrintWriter fileout = new PrintWriter(new FileWriter("pigs.txt"));
+        for(int x = 0;x<size;x++)
+        fileout.println(list[x]);
+        fileout.close();
+        Util.sopl("File has been saved");
+    }//writeFile
+    
+    public void readFile()throws IOException
+    {
+        Scanner file = new Scanner(new File("pigs.txt"));
+        list = new String[MAX];
+        while(size<MAX && file.hasNext())
+        {
+            String str = file.nextLine();
+            list[size]=str;
+            size++;
+        }//while(size<MAX)
+        file.close();
+        Util.sopl(size +" lines has been read into an array");
+    }//readFile
 }//ListClass
