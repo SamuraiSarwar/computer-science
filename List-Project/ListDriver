@@ -1,15 +1,31 @@
+import java.io.IOException;
 public class ListDriver {
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
         int menu = 0;
+        ListClass list = new ListClass();
         do 
         {
-            Util.sopl(null);
+            Util.sopl("\n1. Enter an element");
+            Util.sopl("2. Save elements to file");
+            Util.sopl("3. Save file");
+            Util.sopl("5. Display All Elements");
+            Util.sopl("6, Change element");
+            Util.sopl("15. Quit");
             menu = Util.getI("Enter Menu Choice");
             switch(menu)
             {
-                case 3:
-            }//menu
+                case 1: list.assign(Util.getS("Enter dog breed"));
+                    break;
+                case 2: list.writeFile();
+                    break;
+                case 3: list.readFile();
+                    break;
+                case 5: list.display();
+                    break;
+                case 15:
+                    break;
+            }//switch(menu)
         }while(menu!=15);
     }//main
 }//ListDriver
