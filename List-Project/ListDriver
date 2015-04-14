@@ -10,7 +10,10 @@ public class ListDriver {
             Util.sopl("2. Save elements to file");
             Util.sopl("3. Save file");
             Util.sopl("5. Display All Elements");
-            Util.sopl("6, Change element");
+            Util.sopl("6. Change element");
+            Util.sopl("7. Selection Sort: Descending");
+            Util.sopl("8. Selection Sort: Ascending ");
+            Util.sopl("9. Delete dog breed");Util.sopl("List is in Ascending order")
             Util.sopl("15. Quit");
             menu = Util.getI("Enter Menu Choice");
             switch(menu)
@@ -28,6 +31,31 @@ public class ListDriver {
                 else
                     U.sopl("Model Name not found"); 
                 break;
+                case 6:
+                    //list.readFile();
+                    list.selectionSort();
+                    position = list.binarySearch(Util.getS("Enter breed to change");
+                    if(position != -1)
+                    {
+                        String newBreed = Util.getS("Enter change");
+                        list.change(newBreed.position);
+                    }//if(position != -1)
+                    break;
+                case 7:
+                    list.readFile();
+                    list.selectionSort();
+                    Util.sopl("List is in Ascending order");
+                    break;
+                case 8: 
+                    list.readFile();
+                    list.insertInOrder()
+                    Util.sopl("List is in descending order");
+                    list.display();
+                    break;
+                case 9:
+                    list.selectionSort();
+                    position = 
+                    
                 case 15:
                     break;
             }//switch(menu)
