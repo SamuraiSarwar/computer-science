@@ -87,9 +87,10 @@ class ListClass
                 if(str.compareTo(list[indexMid])>0)
                     indexLow = indexMid + 1;
                 else
-                    
+                    indexHigh = indexMid - 1;
             }//else   
         }//while(indexLow <= indexHigh)
+        return -1;
     }//binarySearch
     //==========================================================================
     public void change(String newStr, int index)
