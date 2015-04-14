@@ -21,8 +21,13 @@ public class ListDriver {
                     break;
                 case 3: list.readFile();
                     break;
-                case 5: list.display();
-                    break;
+                case 5:
+                int position = list.linearSearch(U.getS("Enter Model Name: "));
+                if(position != -1)
+                    list.displayIndividual(position);
+                else
+                    U.sopl("Model Name not found"); 
+                break;
                 case 15:
                     break;
             }//switch(menu)
