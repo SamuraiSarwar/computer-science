@@ -1,81 +1,151 @@
-//Purpose: How to use an algorythm: Selection, inssertion, linearassaign,
-//display, delete, insertInOrder, display single element read & write files
 import java.io.*;
 import java.util.Scanner;
-
-public class ListClass {
-    private String [] list;
-    private int size;//the # of actual ele in the array
-    private final int MAX = 30;//logical size, default size of array
-    //default constructor
+class ListClass 
+{
+    private String[] list;
+    private int size;//the number of actual elements in the array
+    private final int MAX = 30;//logical size, default size of the array
     
+    //default constructor
     public ListClass()
     {
         list = new String[MAX];
         size = 0;
     }//ListClass
-    //user define - allows user to set logical size
-    public ListClass(int sz)
+    
+    //user defined - allows user to set logical size
+    public ListClass(int sr)
     {
-        list = new String[sz];
+        list = new String[sr];
         size = 0;
     }//ListClass user defined
+    
     public void assign(String str)
     {
-        if(size < list.length)
+        if(size<list.length)
         {
             list[size] = str;
             size++;
-        }//if(size < list.length)
+        }//if(size<list.length)
         else
-            Util.sopl("Capacity has been reached.");
+            Util.sopl("Capacity has been reached");
     }//assign
     public void display()
     {
-        for(int x = 0;x<size;x++)
-        {
+        for(int x=0;x<size;x++)
             Util.sopl(list[x]);
-        }
     }//display
-    public void writeFile()throws IOException
+    public void writeFile() throws IOException
     {
-        PrintWriter fileout = new PrintWriter(new FileWriter("pigs.txt"));
-        for(int x = 0;x<size;x++)
-        fileout.println(list[x]);
+        PrintWriter fileout = new PrintWriter(new FileWriter("DOGE.txt"));
+        for(int x = 0; x< size; x++)
+        {
+            fileout.println(list[x]);
+        }//for(int x = 0; x< size; x++)
         fileout.close();
-        Util.sopl("File has been saved");
+        Util.sopl("File dun been saved");
     }//writeFile
-    
-    public void readFile()throws IOException
+    public void readFile() throws IOException
     {
-        Scanner file = new Scanner(new File("pigs.txt"));
+        Scanner file = new Scanner(new File("DOGE.txt"));
         list = new String[MAX];
-        while(size<MAX && file.hasNext())
+        size = 0;
+        while(size < MAX && file.hasNext())
         {
             String str = file.nextLine();
-            list[size]=str;
+            list[size] = str;
             size++;
-        }//while(size<MAX)
+        }//while(size < max && file)
         file.close();
-        Util.sopl(size +" lines has been read into an array");
+        Util.sopl(size+" has been read into array");
     }//readFile
+    //Linear Search - returns the index value of the element or -1 if not found
     public int linearSearch(String str)
     {
         int index = 0;
-        while(index < size)
+        while(index<size)
         {
-            if(str.equals(list[index]))
-                return index; 
-            index++; 
-        }//(index < size)
-        return -1; 
+            if(str.equals(list[index]))//if found, return the index value
+                return index;
+            else
+                index++;
+        }//while(index<size)
+        return -1;
     }//linearSearch
-    public void displayIndividual(int index)
-    {
-        Util.sopl("Model Name: "+ list[index]); 
-    }//displayIndividual
     public int binarySearch(String str)
     {
         int indexLow = 0;
-        
+        int indexHigh = size - 1;
+        int indexMid = 0;
+        while(indexLow <= indexHigh)
+        {
+            indexMid = (indexLow+indexHigh)/2;
+            if(list[indexMid].compareTo(str)==0)
+                return indexMid;
+        else
+            {
+                if(str.compareTo(list[indexMid])>0)
+                    indexLow = indexMid + 1;
+                else
+                    
+            }//else   
+        }//while(indexLow <= indexHigh)
+    }//binarySearch
+    //==========================================================================
+    public void change(String newStr, int index)
+    {
+        list[index] = newStr;
+    }//change
+    //==========================================================================
+    public void delete(int index)
+    {
+        for(int x = index; x<size; x++)
+            list[x] = list[x+1];
+        size--;
+    }//delete
+    //==========================================================================
+    public void insertInOrder(String str)
+    {
+        int index = 0;
+        while(index<size && str.compareTo(list[index])>0)
+            index++;
+        if(size+1 > MAX)
+            Util.sopl("Capacity Reached");
+        else
+        {
+            for(int k = size; k>index;k--)
+                list[k]=list[k-1];
+            list[index] = str;
+            size++;
+        }//else
+    }//insertInOrder
+    public void displayIndividualElement(int index)
+    {
+        Util.sopl("Dog Breed: " +list[index]);
+    }//displayIndividualElement
+    //==========================================================================
+    //private helper method allows for the two elements to switch positions
+    private void swap(int x, int y)
+    {
+        String temp = list[x];
+        list[x] = list[y];
+    }//swap
+    //selection sort - in ascending order
+    public void selectionSort()
+    {
+        int p = 0;//outside loop/position we're looking for
+        int s = 0;//inside loop, position of next smallest element
+        int smallest = 0;//stores the position of the smallest vaue 
+        for(p=0;p<size-1;p++)
+        {
+            smallest = p;
+            for(s=p+1;s<size;s++)
+            {
+                if(list[s].compareTo(list[smallest])<0);
+                smallest = s;
+                if(p!=smallest)
+                    swap(p,smallest);
+            }//for(s=0;s<size;s++)
+        }//for(p=0;p<size-1;p++)
+    }//selectionSort
 }//ListClass
