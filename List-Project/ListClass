@@ -59,4 +59,19 @@ public class ListClass {
         file.close();
         Util.sopl(size +" lines has been read into an array");
     }//readFile
+    public int linearSearch(String str)
+    {
+        int index = 0;
+        while(index < size)
+        {
+            if(str.equals(list[index]))
+                return index; 
+            index++; 
+        }//(index < size)
+        return -1; 
+    }//linearSearch
+    public void displayIndividual(int index)
+    {
+        U.sopl("Model Name: "+ list[index]); 
+    }//displayIndividual
 }//ListClass
