@@ -72,6 +72,6 @@ public class ListClass {
     }//linearSearch
     public void displayIndividual(int index)
     {
-        U.sopl("Model Name: "+ list[index]); 
+        Util.sopl("Model Name: "+ list[index]); 
     }//displayIndividual
 }//ListClass
