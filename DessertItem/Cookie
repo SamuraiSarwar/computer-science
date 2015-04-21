@@ -3,11 +3,6 @@
  *Period 4
  *12/15/2014
  */
-package DesertProject;
-
-/*
- * This is the Cookie Subclass
- */
 public class Cookie extends DessertItem
 {
     private double priceDozen;
