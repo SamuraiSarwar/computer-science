@@ -118,3 +118,26 @@ class Utl{
         sop(userPrompt + " ===> ");
         return kb.nextDouble();      
     }//getDouble
+    public static int getRandomInt(int smallerRange, int greaterRange){
+        int randomNum = (int) ((Math.random() * (greaterRange - smallerRange)) + smallerRange);
+        return randomNum;      
+    }//getRandomInt
+    public static void insertPause(){
+        Scanner kb = new Scanner(System.in);
+        autoBlank(1);
+        sopl("Press Any Key to Continue...");
+        kb.nextLine();        
+    }//insertPause
+    
+    public static void projectHeader(String date){
+        sopl("Project Made by: Glen Lauritsen Period 3 " + date);
+    }//header
+    
+    public static String decimalFormatTwoPlaces(double toFormat){
+    DecimalFormat output = new DecimalFormat("#.00");
+    return output.format(toFormat);
+    
+    
+    
+    }
+}//Util
