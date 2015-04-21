@@ -1,0 +1,51 @@
+public class Sundae extends IceCream
+{
+    private double toppingCost;
+  
+    private String toppingName;
+    
+    public Sundae(){
+        
+        toppingCost = 0;
+       
+    }//Sundae
+    public Sundae(String iceCreamName, double newIceCreamCost, double newToppingPrice){
+        super(iceCreamName, newIceCreamCost);
+        toppingCost = newToppingPrice;
+        toppingName = iceCreamName;
+    }//Sundae
+    
+    @Override
+    public double getCost()
+    {
+        return toppingCost + super.getCost();        
+    }//getCost
+    public void setCost(double newNum)
+    {
+        toppingCost = newNum;
+    }//setCost
+    public String getName()
+    {
+        return super.getName();        
+    }//getCost
+    
+    public void setName(String nm){
+            
+            int cutOff = toppingName.indexOf("/");
+            super.setName((super.getName()).substring(0,cutOff+1)+nm); 
+        
+        
+    }
+    
+    public void iceCreamsetName(String nm){
+            
+            int cutOff = toppingName.indexOf("/");
+            super.setName(nm + (super.getName()).substring(cutOff)); 
+        
+        
+    }
+    
+    public String toString(){        
+        return "\n" + getName() + " " + (getCost());
+    }//toString
+}//Sundae
