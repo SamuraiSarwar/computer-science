@@ -1,117 +1,128 @@
-   /*Muezzin Sarwar
-    *Mrs. Lowenburg
-    *Period 4
-    *2/26/2015
-    */
-    public class DessertDriver{
+public class Driver {
+    
+    
     public static void main(String args[])
-            {
-        int menu=0;
-        Util.sopl("Weclome to the Candy Store");
-        String name = Util.getS("What is your name?");
-        final double TAX_RATE = .0825;
-        do 
+    {
+        //==Declerations==\\
+        int menu = 0;
+        final double TAX_RATE = .0875;
+        DessertItem dessert = null;
+        DessertList list = new DessertList();
+        //==Declerations==\\
+        
+        
+        
+        do{
+        
+        Utl.sopl("\n\n1)Buy Cookie");
+        Utl.sopl("2)Buy Candy");
+        Utl.sopl("3)Buy Ice Cream");
+        Utl.sopl("4)Buy Ice Cream Sundae");
+        Utl.sopl("5)Display Total");
+        Utl.sopl("6)Change Information");
+        Utl.sopl("7)Display Order");
+        Utl.sopl("15)Quit");
+            menu = Utl.getInt("Selection? ");
+        
+        switch(menu)
         {
-            Util.sopl("1. Cookie");
-            Util.sopl("2. Candy");
-            Util.sopl("3. Cookie");
-            Util.sopl("4. Cookie");
-            Util.sopl("5. Cookie");
-            Util.sopl("6. Cookie");
-            Util.sopl("Cookie");
-            menu = Util.getI("Choose a #");
-            switch (menu)
-            {
-                case 1:
-                    
-                    name = Util.getS("Enter name of cookie");
-                    int qty = Util.getI("Enter # of cookies");
-                    double price = Util.getD("Enter # of dozen");
-                    Cookie dessert = new Cookie(name, qty, price);
-                    break;//case 1//case 1
-                case 2:
-                    name = Util.getS("Enter name of cookie");
-                    qty = Util.getI("Enter # of cookies");
-                    price = Util.getD("Enter # of dozen");
-                    dessert = new Cookie(name, qty, price);
-                    break;//case 2
-                case 3:
-                    name = Util.getS("Enter name of cookie");
-                    qty = Util.getI("Enter # of cookies");
-                    price = Util.getD("Enter # of dozen");
-                    dessert = new Cookie(name, qty, price);
-                    break;//case 3
-                case 4:
-                    name = Util.getS("Enter name of cookie");
-                    qty = Util.getI("Enter # of cookies");
-                    price = Util.getD("Enter # of dozen");
-                    dessert = new Cookie(name, qty, price);
-                    break;//case 4
-                                
-                case 5:
-                    double total = dessert.getCost();
+            case 1: String name = Utl.getString("Enter Name of Cookie");
+                    int num = Utl.getInt("Enter number of Cookies");
+                    double price = Utl.getDouble("Enter Price Per Dozen");
+                    dessert = new Cookie(name, num, price);
+                    list.assign(dessert);
+                break;
+            case 2: name = Utl.getString("Enter Name of Candy");
+                    double weight = Utl.getDouble("Enter Weight of Candy");
+                    price = Utl.getDouble("Enter Price Per Pound");
+                    dessert = new Candy(name, weight, price);
+                    list.assign(dessert);
+                break;
+            case 3: name = Utl.getString("Enter Name of Ice Cream");
+                    price = Utl.getDouble("Enter Price of Ice Cream");
+                    dessert = new IceCream(name, price);
+                    list.assign(dessert);
+                break;
+            case 4: name = Utl.getString("Enter Name of Ice Cream");
+                    String toppingName = Utl.getString("Enter Name of Topping");
+                    price = Utl.getDouble("Enter Price of Ice Cream");
+                    double toppingPrice = Utl.getDouble("Enter Price of Topping");
+                    dessert = new Sundae(name + "/" + toppingName, price, toppingPrice);
+                    list.assign(dessert);
+                break;
+            case 5: double total = dessert.getCost();
                     double tax = total * TAX_RATE;
                     double totalDue = total + tax;
-                    Util.sopl(dessert);
-                    Util.sopl("   Total:   " + total);
-                    Util.sopl("   Tax:   " + tax);
-                    Util.sopl("   Total Due:   " + totalDue);
-                    break;//case 5
-                case 6:
-                    int changeMenu = 0;
-                    int itemMenu = 0;
-                    Util.sopl("Change: 1.Cookie 2. Candy 3. Ice cream 4. Sundae");
-                    changeMenu = Util.getI("Enter dessert to change");
-                    switch(changeMenu)
-                    {
-                        case 1:
-                        Util.sopl("Item to change");
-                        itemMenu = Util.getI("Enter item # to change");
-                        if(itemMenu==1)
-                            dessert.changeName(Util.getS("Enter new name"));
-                        else
-                            if(itemMenu==2)
-                            ((Cookie)dessert).setNumCookie(Util.getI("Enter new quantity"));
-                                else
-                            ((Cookie)dessert).setPriceDozen(Util.getD("Enter new price"));
-                            break;//menu
-                        case 2:
-                        Util.sopl("Item to change");
-                        itemMenu = Util.getI("Enter item # to change");
-                        if(itemMenu==1)
-                            dessert.changeName(Util.getS("Enter new name"));
-                        else
-                            if(itemMenu==2)
-                                ((Candy)dessert).setWeight(Util.getI("Enter new quantity"));
-                            else
-                                ((Cookie)dessert).setPriceDozen(Util.getD("Enter new price"));
-                            break;//case 2
-                        case 3:
-                            Util.sopl("Item to change");
-                        itemMenu = Util.getI("Enter item # to change");
-                        if(itemMenu==1)
-                            dessert.changeName(Util.getS("Enter new name"));
-                        else
-                            if(itemMenu==2)
-                                ((Icecream)dessert).setNumCookie(Util.getI("Enter new quantity"));
-                            else
-                                ((Icecream)dessert).setPriceDozen(Util.getD("Enter new price"));
-                            break;//case 3
-                        case 4:
-                            Util.sopl("Item to change");
-                        itemMenu = Util.getI("Enter item # to change");
-                        if(itemMenu==1);
-                            dessert.changeName(Util.getS("Enter new name"));
-                        else
-                            if(itemMenu==2);
-                            ((Icecream)dessert).setNumCookie(Util.getS("Enter new quantity"));
-                            else
-                            ((Sundae)dessert).setPriceDozen(Util.getS("Enter new price"));
-                            break;//case 4
-                            
-                            
-                    }//switch(changeMenu)
-            }//switch(menu)
-        }while(menu!=7);
+                    Utl.sopl("\n\n\n--------- Customer : Billy Bob Joe      ---------\n\n\n\n");
+                    Utl.sopl(dessert);
+                    Utl.sopl("-------------------------------------------------");
+                    Utl.sopl("=================================================");
+                    Utl.sopl("-------------------------------------------------");
+                    Utl.sopl("SubTotal:                                        " + Utl.decimalFormatTwoPlaces(total));
+                    Utl.sopl("Tax:                                             "+ Utl.decimalFormatTwoPlaces(tax));
+                    Utl.sopl("Total:                                           "+ Utl.decimalFormatTwoPlaces(totalDue));
+                break;
+            case 6: int change =  0, itemChange = 0;
+                    Utl.sopl("Change: 1) Cookie 2) Candy 3) IceCream 4) Sundae");
+                    change = Utl.getInt("Enter itme to change ");
+                    switch(change) {
+                        case 1: Utl.sopl("1. Name 2. Price Per Dozen 3. Number of Cookies");
+                                itemChange = Utl.getInt("Enter item to change: ");
+                                if (itemChange == 1)
+                                    dessert.setName(Utl.getString("Enter new Name "));
+                                    else
+                                        if (itemChange == 2)
+                                            ((Cookie) dessert).setPriceDozen(Utl.getDouble("Enter new Price Per Dozen"));
+                                       
+                                            else
+                                                ((Cookie) dessert).setNumCookies(Utl.getInt("Enter new Number of Cookies"));
+                                break;
+                        
+                                    
+                        case 2: Utl.sopl("1. Name 2. Price Per Pound 3. Weight of Candy");
+                                itemChange = Utl.getInt("Enter item to change: ");
+                                if (itemChange == 1)
+                                    dessert.setName(Utl.getString("Enter new Name "));
+                                    else
+                                        if (itemChange == 2)
+                                            ((Candy) dessert).setPricePerPound(Utl.getDouble("Enter new Price Per Pound"));
+                                       
+                                            else
+                                                ((Candy) dessert).setCandyWeight(Utl.getDouble("Enter new Weight of Candy"));
+                                break;
+                        
+                        case 3: Utl.sopl("1. Name 2. Price");
+                                itemChange = Utl.getInt("Enter item to change: ");
+                                if (itemChange == 1)
+                                    dessert.setName(Utl.getString("Enter new Name "));
+                                    else
+                                        if (itemChange == 2)
+                                            ((IceCream) dessert).setPrice(Utl.getInt("Enter new Price"));
+                                break;
+                        case 4: Utl.sopl("1. Name of Ice Cream 2. Ice Cream Price 3. Topping Name 4. Topping Price");
+                                itemChange = Utl.getInt("Enter item to change: ");
+                                if (itemChange == 1)
+                                    ((Sundae)dessert).iceCreamsetName(Utl.getString("Enter new Ice Cream Name "));
+                                    else
+                                        if (itemChange == 2)
+                                            ((IceCream)dessert).setPrice(Utl.getDouble("Enter new Ice Cream Price"));
+                                        else
+                                            if (itemChange == 3)
+                                                dessert.setName(Utl.getString("Enter new Topping Name "));
+                                            else
+                                                ((Sundae) dessert).setPrice(Utl.getDouble("Enter new Topping Price"));
+                                break;
+                        
+                                    }
+        
+            case 7: list.display();
+                    break;
+            case 15: break;
+            default: Utl.sopl("Please enter a valid selection!\n\n");
+        }//switch(menu)
+        }while (menu != 15);
+        
+        //new DessertItem
     }//main
-}//DessertDriver
+    
+}//Driver
