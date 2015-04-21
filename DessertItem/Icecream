@@ -3,38 +3,34 @@
  *Period 4
  *12/15/2014
  */
-public class Icecream extends DessertItem{ 
-     private double priceIce; 
-     public Icecream()
-    {
-        priceIce = 0;
-    }//default
-     //default constructor 
-     //user defined constructor 
-     public Icecream(String nm, double cost) 
-     { 
-         super(nm); 
-         priceIce= cost; 
-     }//user defined
-      public double getPricePound()
-      {
-          return priceIce;
-      }
-      public void setPricePound(double price)
-      {
-          priceIce = price;
-      }
-      public String toString()
-      {
-          return super.toString() + "\nSundae: $";
-      }
-      @Override
-     public double getCost() 
-     { 
-         return priceIce;
-     }    
-}
-     class Sundae extends Icecream{
-          private double topping;
-          
-      }
+public class IceCream extends DessertItem {
+
+    private double price;
+    
+    public IceCream() {
+
+        price = 0;
+    }//IceCream
+
+    public IceCream( String iceCreamName, double newPrice) {
+        super(iceCreamName, 'i');
+        price = newPrice;
+    }//IceCream
+
+    @Override
+    public double getCost() {
+        return price;
+    }//getCost
+    public String getName(){
+        return super.getName();
+    }
+    public void setPrice(double newNum) {
+
+        price = newNum;
+    }//setPrice
+    
+    public String toString() {
+        return "\n" + super.getName() + " " + price;
+    }//toString
+
+}//IceCream
