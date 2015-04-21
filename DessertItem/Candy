@@ -3,11 +3,6 @@
  *Period 4
  *12/15/2014
  */
-package DesertProject;
-
-/*
- * This is a subclass of DessertItem
- */
 public class Candy extends DessertItem {
     private double candyWeight;
     private double pricePerPound;
