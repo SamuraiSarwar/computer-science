@@ -1,0 +1,37 @@
+public class DessertList 
+{
+    private DessertItem[] list;
+    private int size;
+    private final int MAX = 20;
+    
+    public DessertList()
+    {
+        list = new DessertItem[MAX];
+        size = 0;
+    }//DessertList Default
+    
+    public DessertList(int sz)
+    {
+        list = new DessertItem[sz];
+        size = 0;
+    }//DessertList user defined
+    
+    public void assign(DessertItem obj)
+    {
+        if(size < list.length)
+        {
+          list[size] = obj;
+          size++;
+        }//if(size < list.length) 
+    }//assign
+    
+    // display all elements of the array using
+    // a for each loop
+    
+    public void display()
+    {
+        for (int x=0; x<size; x++)
+            Util.sopl(list[x]);
+    }//display
+}//DessertList
+
