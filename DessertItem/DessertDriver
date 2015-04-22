@@ -14,15 +14,15 @@ public class Driver {
         
         do{
         
-        Utl.sopl("\n\n1)Buy Cookie");
-        Utl.sopl("2)Buy Candy");
-        Utl.sopl("3)Buy Ice Cream");
-        Utl.sopl("4)Buy Ice Cream Sundae");
-        Utl.sopl("5)Display Total");
-        Utl.sopl("6)Change Information");
-        Utl.sopl("7)Display Order");
-        Utl.sopl("15)Quit");
-            menu = Utl.getInt("Selection? ");
+        Utl.sopl("\n\n1.Buy Cookie");
+        Utl.sopl("2.Buy Candy");
+        Utl.sopl("3.Buy Ice Cream");
+        Utl.sopl("4.Buy Ice Cream Sundae");
+        Utl.sopl("5.Display Total");
+        Utl.sopl("6.Change Information");
+        Utl.sopl("7.Display Order");
+        Utl.sopl("15.Quit");
+            menu = Utl.getInt("Select a # ");
         
         switch(menu)
         {
@@ -116,6 +116,10 @@ public class Driver {
                                     }
         
             case 7: list.display();
+                    break;
+            case 8: list.writeFile();
+                    break;
+            case 9: 
                     break;
             case 15: break;
             default: Utl.sopl("Please enter a valid selection!\n\n");
