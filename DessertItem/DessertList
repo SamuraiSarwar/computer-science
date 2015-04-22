@@ -35,17 +35,23 @@ public class DessertList
     }//display
     public void writeFile() throws IOException
     {
-        PrintWriter fileout = new PrintWriter(new FileWriter("DOGE.txt"));
+        PrintWriter fileout = new PrintWriter(new FileWriter("dessert.txt"));
         for(int x = 0; x< size; x++)
         {
-            fileout.println(list[x]);
+            fileout.println(list.Type[x]);
+            fileout.println(list.Name[x]);
+            if(list[x].getType()=='k');
+            {
+                fileout.println(list[x].getPriceDozen());
+                fileout.println(list[x].getNumCookie());
+            }
         }//for(int x = 0; x< size; x++)
         fileout.close();
         Util.sopl("File dun been saved");
     }//writeFile
     public void readFile() throws IOException
     {
-        Scanner file = new Scanner(new File("DOGE.txt"));
+        Scanner file = new Scanner(new File("dessert.txt"));
         list = new String[MAX];
         size = 0;
         while(size < MAX && file.hasNext())
