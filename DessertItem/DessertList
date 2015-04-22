@@ -33,5 +33,29 @@ public class DessertList
         for (int x=0; x<size; x++)
             Util.sopl(list[x]);
     }//display
+    public void writeFile() throws IOException
+    {
+        PrintWriter fileout = new PrintWriter(new FileWriter("DOGE.txt"));
+        for(int x = 0; x< size; x++)
+        {
+            fileout.println(list[x]);
+        }//for(int x = 0; x< size; x++)
+        fileout.close();
+        Util.sopl("File dun been saved");
+    }//writeFile
+    public void readFile() throws IOException
+    {
+        Scanner file = new Scanner(new File("DOGE.txt"));
+        list = new String[MAX];
+        size = 0;
+        while(size < MAX && file.hasNext())
+        {
+            String str = file.nextLine();
+            list[size] = str;
+            size++;
+        }//while(size < max && file)
+        file.close();
+        Util.sopl(size+" has been read into array");
+    }//readFile
 }//DessertList
 
