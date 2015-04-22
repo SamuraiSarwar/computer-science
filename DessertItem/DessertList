@@ -42,9 +42,18 @@ public class DessertList
             fileout.println(list.Name[x]);
             if(list[x].getType()=='k');
             {
-                fileout.println(list[x].getPriceDozen());
-                fileout.println(list[x].getNumCookie());
-            }
+                fileout.println((Cookie)list[x]).getPriceDozen());
+                fileout.println((Cookie)list[x]).getNumCookie());
+            }//if Cookie
+            else if(list[x].getType()=='C')
+            {
+                fileout.println((Candy)list[x]).getPriceLb());
+                fileout.println((Candy)list[x]).getWeight());
+            }//if Candy
+            else if(list[x].getType()=='I')
+            {
+                fileout.println((IceCream)list[x]).getCost());
+            }//if Icecream
         }//for(int x = 0; x< size; x++)
         fileout.close();
         Util.sopl("File dun been saved");
