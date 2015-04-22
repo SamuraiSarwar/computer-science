@@ -51,7 +51,7 @@ public class DessertList
         while(size < MAX && file.hasNext())
         {
             String str = file.nextLine();
-            list[size] = str;
+            //list[size] = str;
             size++;
         }//while(size < max && file)
         file.close();
