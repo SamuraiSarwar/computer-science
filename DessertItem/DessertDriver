@@ -14,13 +14,14 @@ public class Driver {
         
         do{
         
-        Utl.sopl("\n\n1.Buy Cookie");
-        Utl.sopl("2.Buy Candy");
-        Utl.sopl("3.Buy Ice Cream");
-        Utl.sopl("4.Buy Ice Cream Sundae");
-        Utl.sopl("5.Display Total");
-        Utl.sopl("6.Change Information");
-        Utl.sopl("7.Display Order");
+        Utl.sopl("\n\n1. Buy Cookie");
+        Utl.sopl("2. Buy Candy");
+        Utl.sopl("3. Buy Ice Cream");
+        Utl.sopl("4. Buy Ice Cream Sundae");
+        Utl.sopl("5. Display Total");
+        Utl.sopl("6. Change Information");
+        Utl.sopl("7. Display Order");
+        Utl.sopl("8. Write file");
         Utl.sopl("15.Quit");
             menu = Utl.getInt("Select a # ");
         
@@ -119,7 +120,7 @@ public class Driver {
                     break;
             case 8: list.writeFile();
                     break;
-            case 9: 
+            case 9: list.readFile();
                     break;
             case 15: break;
             default: Utl.sopl("Please enter a valid selection!\n\n");
