@@ -89,9 +89,9 @@ public class DessertList
                 price = file.nextDouble();
                 dessert = new Cookie(nm, price);
             }
+            file.nextLine();
+            list[size] = dessert;
             size ++;
-            //list[size] = str;
-            size++;
         }//while(size < max && file)
         file.close();
         Util.sopl(size+" has been read into array");
