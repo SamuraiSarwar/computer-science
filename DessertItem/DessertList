@@ -63,9 +63,33 @@ public class DessertList
         Scanner file = new Scanner(new File("dessert.txt"));
         list = new String[MAX];
         size = 0;
+        DessertItem dessert = null;
+        int num = 0;
+        double qty, price = 0;
+        char ty = ' ';
+        String nm "";
         while(size < MAX && file.hasNext())
         {
-            String str = file.nextLine();
+            ty = file.nextLine().CharAt(0);
+            nm = file.nextLine();
+            if(ty=='K');
+            {
+                price = file.nextDouble();
+                num = file.nextInt();
+                dessert = new Cookie(nm, num, price);
+            }
+            else if(ty=='C')
+            {
+                price = file.nextDouble();
+                qty = file.nextDouble();
+                dessert = new Candy(nm, qty, price);    
+            }
+            else if(ty=='I')
+            {
+                price = file.nextDouble();
+                dessert = new Cookie(nm, price);
+            }
+            size ++;
             //list[size] = str;
             size++;
         }//while(size < max && file)
