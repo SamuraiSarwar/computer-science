@@ -21,7 +21,13 @@ public class Driver {
         Utl.sopl("5. Display Total");
         Utl.sopl("6. Change Information");
         Utl.sopl("7. Display Order");
-        Utl.sopl("8. Write file");
+        Utl.sopl("8. Save file");
+        Utl.sopl("9. Open file");
+        Utl.sopl("10. Write file");
+        Utl.sopl("11. Display Individual");
+        Utl.sopl("12. ");
+        Utl.sopl("13. ");
+        Utl.sopl("14. ");
         Utl.sopl("15.Quit");
             menu = Utl.getInt("Select a # ");
         
