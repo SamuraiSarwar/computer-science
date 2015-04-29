@@ -128,6 +128,18 @@ public class Driver {
                     break;
             case 9: list.readFile();
                     break;
+            case 12: int changPosition = list.linearSearch(Util.getS("Enter Item"));
+                if(changePosition != -1)
+                {
+                    dessert = list.getDessertItem(changePosition);
+                    switch(dessert.getType())
+                    {
+                        case 'K': 
+                    }
+                    list.change(dessert,changePosition);
+                }
+                else
+                Util.sopl("Item not found");    
             case 15: break;
             default: Utl.sopl("Please enter a valid selection!\n\n");
         }//switch(menu)
