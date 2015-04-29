@@ -96,5 +96,10 @@ public class DessertList
         file.close();
         Util.sopl(size+" has been read into array");
     }//readFile
+    public void change(DessertItem obj, int index)
+    {
+        list[index] = obj;
+    }
+    public DessertItem getDessertItem
 }//DessertList
 
