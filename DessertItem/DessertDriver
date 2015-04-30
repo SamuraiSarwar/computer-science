@@ -3,14 +3,10 @@ public class Driver {
     
     public static void main(String args[])
     {
-        //==Declerations==\\
         int menu = 0;
         final double TAX_RATE = .0875;
         DessertItem dessert = null;
         DessertList list = new DessertList();
-        //==Declerations==\\
-        
-        
         
         do{
         
