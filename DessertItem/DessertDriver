@@ -25,9 +25,9 @@ public class Driver {
         Utl.sopl("9. Open file");
         Utl.sopl("10. Write file");
         Utl.sopl("11. Display Individual");
-        Utl.sopl("12. ");
-        Utl.sopl("13. ");
-        Utl.sopl("14. ");
+        Utl.sopl("12. Change Order - Linear Sort");
+        Utl.sopl("13. Insert in order by name - selection sort");
+        //Utl.sopl("14. ");
         Utl.sopl("15.Quit");
             menu = Utl.getInt("Select a # ");
         
@@ -60,7 +60,7 @@ public class Driver {
             case 5: double total = dessert.getCost();
                     double tax = total * TAX_RATE;
                     double totalDue = total + tax;
-                    Utl.sopl("\n\n\n--------- Customer : Billy Bob Joe      ---------\n\n\n\n");
+                    Utl.sopl("\n\n\n--------- Customer : Dan Timmothy      ---------\n\n\n\n");
                     Utl.sopl(dessert);
                     Utl.sopl("-------------------------------------------------");
                     Utl.sopl("=================================================");
