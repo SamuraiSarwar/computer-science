@@ -14,11 +14,11 @@ public class Driver {
         
         do{
         
-        Utl.sopl("\n\n1. Buy Cookie");
-        Utl.sopl("2. Buy Candy");
-        Utl.sopl("3. Buy Ice Cream");
-        Utl.sopl("4. Buy Ice Cream Sundae");
-        Utl.sopl("5. Display Total");
+        Utl.sopl("\n\n1. Cookie");
+        Utl.sopl("2. Candy");
+        Utl.sopl("3. Ice Cream");
+        Utl.sopl("4. Sundae");
+        Utl.sopl("5. Display Receipt");
         Utl.sopl("6. Change Information");
         Utl.sopl("7. Display Order");
         Utl.sopl("8. Save file");
